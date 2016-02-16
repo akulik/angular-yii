@@ -1,0 +1,8 @@
+<div ng-messages="this.errors">
+
+    <span class="error"
+          ng-repeat="(error, bool) in this.errors track by $index"
+          ng-message="{{error}}">
+      {{::this.errorMessages[error]}}
+    </span>
+</div>

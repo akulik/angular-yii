@@ -1,0 +1,13 @@
+<div class="noty-container">
+    <div ng-repeat="noty in this.noties track by $index"
+         class="noty-body {{noty.type}}" ng-if="noty.visible">
+        <h4 class="noty-title"
+              ng-bind="noty.title">
+
+        </h4>
+        <span class="noty-text"
+                ng-bind="noty.text">
+
+        </span>
+    </div>
+</div>

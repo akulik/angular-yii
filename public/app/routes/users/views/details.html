@@ -1,0 +1,26 @@
+<form name="ctrl.form"
+      ng-submit="ctrl.save($event)">
+  <cp-input name="email" label="Email">
+    <input type="text"
+           id="email"
+           ng-model="ctrl.user.email"
+           name="email"
+           ng-model-options="{updateOn: 'blur default', debounce: {blur: 0, default: 300}}"
+           validate-email
+           required />
+  </cp-input>
+  <cp-input name="name" label="User Name">
+    <input type="text"
+           id="name"
+           ng-model="ctrl.user.name"
+           name="name"
+           ng-model-options="{updateOn: 'blur'}"
+           required />
+  </cp-input>
+
+    <button type="submit"
+            ng-disabled="ctrl.form.$pristine">
+        Submit
+    </button>
+
+</form>

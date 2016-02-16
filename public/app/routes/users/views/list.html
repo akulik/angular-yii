@@ -1,0 +1,24 @@
+<div ng-if="ctrl.users.$resolved">
+    <table>
+        <thead>
+        <tr>
+            <th>User Name</th>
+            <th>Email</th>
+            <th>Company Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-click="ctrl.showPosts(user)"
+            ng-repeat="user in ctrl.users track by user.id">
+            <td ng-bind="user.name">Not rendered yet</td>
+            <td ng-bind="user.email"></td>
+            <td ng-bind="user.company.name"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div ng-hide="ctrl.users.$resolved">
+    Loading....
+</div>
+
+

@@ -1,0 +1,10 @@
+<table>
+    <tbody ng-repeat="post in this.posts track by post.id">
+    <tr ng-click="post.expand = !post.expand">
+        <td ng-bind="post.title"></td>
+    </tr>
+    <tr ng-if="post.expand">
+        <td ng-bind="post.body"></td>
+    </tr>
+    </tbody>
+</table>
